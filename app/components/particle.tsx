@@ -48,7 +48,7 @@ const ParticlesComponent = () => {
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: "none",
             },
           },
           modes: {
@@ -68,15 +68,15 @@ const ParticlesComponent = () => {
           links: {
             color: "#ffffff",
             distance: 150,
-            enable: true,
+            enable: false,
             opacity: 0.5,
             width: 1,
           },
           move: {
-            direction: "none",
+            direction: "right",
             enable: true,
             outModes: {
-              default: "bounce",
+              default: "out",
             },
             random: false,
             speed: 6,
@@ -92,7 +92,7 @@ const ParticlesComponent = () => {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: "star",
           },
           size: {
             value: { min: 1, max: 5 },
