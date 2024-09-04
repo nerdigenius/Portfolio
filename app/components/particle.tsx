@@ -44,11 +44,11 @@ const ParticlesComponent = () => {
           events: {
             onClick: {
               enable: true,
-              mode: "push",
+              mode: "explode",
             },
             onHover: {
               enable: true,
-              mode: "none",
+              mode: "draw",
             },
           },
           modes: {
@@ -63,7 +63,18 @@ const ParticlesComponent = () => {
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: [
+              "#3998D0",
+              "#2EB6AF",
+              "#A9BD33",
+              "#FEC73B",
+              "#F89930",
+              "#F45623",
+              "#D62E32",
+              "#EB586E",
+              "#9952CF"
+            ]
+            
           },
           links: {
             color: "#ffffff",
@@ -73,30 +84,36 @@ const ParticlesComponent = () => {
             width: 1,
           },
           move: {
-            direction: "right",
+            direction: "",
             enable: true,
             outModes: {
               default: "out",
             },
-            random: false,
+            random: true,
             speed: 6,
-            straight: false,
+            straight: true,
           },
           number: {
             density: {
               enable: true,
             },
-            value: 80,
+            value: 100,
           },
           opacity: {
-            value: 0.5,
+            value: 1,
           },
           shape: {
-            type: "star",
+            type: "circle",
+           fill:true,
+            
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 10, max: 50 },
           },
+          collisions: {
+            enable: true,
+            mode:"bounce" 
+          }
         },
         detectRetina: true,
       }),
